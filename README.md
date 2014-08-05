@@ -4,7 +4,7 @@ Marlin-Shapeoko-CNC
 Excerp:
 -------
 This code is almost the same as the original marlin code, but it has some features, added, removed or tweaked.
-This code is tailored to be used with an Shapeoko CNC router. This code should work out of the box with the folling hardware:
+This code is tailored to be used with an Shapeoko CNC router. This code should work out of the box with the following hardware:
  - Arduino Mega (AtMega 1280)
  - RAMPS 1.4 Shield
  - DRV8825 stepper motor driver carrier, high current
