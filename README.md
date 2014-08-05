@@ -13,9 +13,8 @@ This code is tailored to be used with an Shapeoko CNC router. This code should w
  
 Main features adjusted from original:
 -------------------------------------
-Corrected code to 1/32 microstepping drivers. (correct dimentions and feedrates now)
-Temperature controlling code partially disabled.
-Power-outputs connected to fan-control (1 fan) and spindle control (2 spindles)
+Corrected code to 1/32 microstepping drivers. (correct dimentions and feedrates now).Temperature controlling code partially disabled.
+Power-outputs connected to fan-control (1 fan) and spindle control (2 spindles).
 Added M3 (spindle-on) and M5 (spindle-off) commands:
 examples:
  - M3 P1 S127  = spindle 1 at 50% duty cycle
