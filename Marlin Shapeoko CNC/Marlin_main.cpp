@@ -1264,9 +1264,10 @@ void process_commands()
           current_position[Z_AXIS] = destination[Z_AXIS];
 
           // take care of back off and rehome now we are all at the top
-          HOMEAXIS(X);
-          HOMEAXIS(Y);
           HOMEAXIS(Z);
+		  HOMEAXIS(X);
+          HOMEAXIS(Y);
+          
 
           calculate_delta(current_position);
           plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS]);
@@ -1275,7 +1276,7 @@ void process_commands()
 
       home_all_axis = !((code_seen(axis_codes[X_AXIS])) || (code_seen(axis_codes[Y_AXIS])) || (code_seen(axis_codes[Z_AXIS])));
 
-      #if Z_HOME_DIR > 0                      // If homing away from BED do Z first
+      #if Z_HOME_DIR < 0                      // If homing away from BED do Z first
       if((home_all_axis) || (code_seen(axis_codes[Z_AXIS]))) {
         HOMEAXIS(Z);
       }
@@ -1358,7 +1359,7 @@ void process_commands()
         }
       }
 
-      #if Z_HOME_DIR < 0                      // If homing towards BED do Z last
+      #if Z_HOME_DIR > 0                      // If homing towards BED do Z last
         #ifndef Z_SAFE_HOMING
           if((home_all_axis) || (code_seen(axis_codes[Z_AXIS]))) {
             #if defined (Z_RAISE_BEFORE_HOMING) && (Z_RAISE_BEFORE_HOMING > 0)
