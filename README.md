@@ -33,3 +33,5 @@ To-do:
  
 ---------------------------------------------
 ELECTRONICS::lab Marlin code for Shapeoko CNC
+www.electronicslab.be
+http://www.electronicslab.be/elgg/groups/profile/342/shapeoko-cnc
